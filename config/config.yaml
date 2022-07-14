@@ -1,0 +1,49 @@
+training_pipeline_config:
+  pipeline_name: flight_fare
+  artifact_dir: artifact
+
+data_ingestion_config:
+
+  train_dataset_download_url: https://github.com/Athira-M-Chandran/Flight-Fare-Prediction/blob/main/Dataset/Data_Train.xlsx?raw=true
+  test_dataset_download_url: https://github.com/Athira-M-Chandran/Flight-Fare-Prediction/blob/main/Dataset/Test_set.xlsx?raw=true
+  sample_dataset_download_url: https://github.com/Athira-M-Chandran/Flight-Fare-Prediction/blob/main/Dataset/Sample_submission.xlsx?raw=true
+  ingested_dir: ingested_data
+  ingested_train_dir: train
+  ingested_test_dir: test 
+  ingested_sample_dir: sample
+
+  data_validation_config:
+
+  schema_dir: config
+  schema_file_name: schema.yaml
+  report_file_name: report.json
+  report_page_file_name: report.html
+
+data_transformation_config:
+  Journey_date: true
+  Journey_month: true 
+  Dep_hour: true
+  Dep_min: true
+  Arrival_hour: true
+  Arrival_min: true
+
+  transformed_dir: transformed_data
+  transformed_train_dir: train
+  transformed_test_dir: test
+  preprocessing_dir: preprocessed
+  preprocessed_object_file_name: preprocessed.pkl
+  
+model_trainer_config:
+  trained_model_dir: trained_model
+  model_file_name: model.pkl
+  base_accuracy: 0.6
+  model_config_dir: config
+  model_config_file_name: model.yaml
+
+
+model_evaluation_config:
+  model_evaluation_file_name: model_evaluation.yaml
+  
+
+model_pusher_config:
+  model_export_dir: saved_models
