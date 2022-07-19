@@ -12,8 +12,7 @@ data_ingestion_config:
   ingested_test_dir: test 
   ingested_sample_dir: sample
 
-  data_validation_config:
-
+data_validation_config:
   schema_dir: config
   schema_file_name: schema.yaml
   report_file_name: report.json

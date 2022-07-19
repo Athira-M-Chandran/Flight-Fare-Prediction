@@ -27,14 +27,16 @@ class DataIngestion:
             test_download_url = self.data_ingestion_config.test_dataset_download_url
             sample_download_url = self.data_ingestion_config.sample_dataset_download_url
 
-            #folder location to download file
-            #raw_data_dir = self.data_ingestion_config.raw_data_dir
+            if os.path.exists(self.data_ingestion_config.ingested_train_dir):
+                os.remove(self.data_ingestion_config.ingested_train_dir)
             
+            if os.path.exists(self.data_ingestion_config.ingested_test_dir):
+                os.remove(self.data_ingestion_config.ingested_test_dir)
             
-            #if os.path.exists(raw_data_dir):
-             #   os.remove(raw_data_dir)
+            if os.path.exists(self.data_ingestion_config.ingested_sample_dir):
+                os.remove(self.data_ingestion_config.ingested_sample_dir)
 
-            #os.makedirs(raw_data_dir,exist_ok=True)
+
             os.makedirs(self.data_ingestion_config.ingested_train_dir,exist_ok=True)
             os.makedirs(self.data_ingestion_config.ingested_test_dir,exist_ok=True)
             os.makedirs(self.data_ingestion_config.ingested_sample_dir,exist_ok=True)
@@ -42,10 +44,6 @@ class DataIngestion:
             train_file_name = os.path.basename(train_download_url).split("?")[0]
             test_file_name = os.path.basename(test_download_url).split("?")[0]
             sample_file_name = os.path.basename(sample_download_url).split("?")[0]
-
-            #train_file_path = os.path.join(raw_data_dir, train_file_name)
-            #test_file_path = os.path.join(raw_data_dir, test_file_name)
-            #sample_file_path = os.path.join(raw_data_dir, sample_file_name)
 
             train_file_path = os.path.join(self.data_ingestion_config.ingested_train_dir,
                                             train_file_name)

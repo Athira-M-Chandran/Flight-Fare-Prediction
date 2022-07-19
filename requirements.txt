@@ -7,4 +7,5 @@ PyYAML
 evidently
 dill
 matplotlib
+openpyxl # for reading excel file
 -e .
