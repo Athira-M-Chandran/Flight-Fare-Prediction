@@ -15,7 +15,7 @@ from flight_fare.config.configuration import Configuartion
 from flight_fare.entity.artifact_entity import DataIngestionArtifact, DataValidationArtifact
 from flight_fare.entity.config_entity import DataIngestionConfig, ModelEvaluationConfig
 from flight_fare.component.data_ingestion import DataIngestion
-from flight_fare.component.data_validation import DataValidation
+#from flight_fare.component.data_validation import DataValidation
 from flight_fare.constant import EXPERIMENT_DIR_NAME, EXPERIMENT_FILE_NAME
 
 class Pipeline:

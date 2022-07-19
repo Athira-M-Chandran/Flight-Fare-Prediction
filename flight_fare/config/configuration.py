@@ -32,6 +32,7 @@ class Configuartion:
                 test_dataset_download_url = data_ingestion_info[DATA_INGESTION_TEST_DOWNLOAD_URL_KEY]
                 sample_dataset_download_url = data_ingestion_info[DATA_INGESTION_SAMPLE_DOWNLOAD_URL_KEY]
                 
+                
                 ingested_data_dir = os.path.join(
                     data_ingestion_artifact_dir,
                     data_ingestion_info[DATA_INGESTION_INGESTED_DIR_NAME_KEY]
@@ -73,6 +74,7 @@ class Configuartion:
                     self.time_stamp
                 )
                 data_validation_config = self.config_info[DATA_VALIDATION_CONFIG_KEY]
+
 
 
                 schema_file_path = os.path.join(ROOT_DIR,

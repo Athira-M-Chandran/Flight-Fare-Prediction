@@ -4,9 +4,9 @@ training_pipeline_config:
 
 data_ingestion_config:
 
-  train_dataset_download_url: https://github.com/Athira-M-Chandran/Flight-Fare-Prediction/blob/main/Dataset/Data_Train.xlsx?raw=true
-  test_dataset_download_url: https://github.com/Athira-M-Chandran/Flight-Fare-Prediction/blob/main/Dataset/Test_set.xlsx?raw=true
-  sample_dataset_download_url: https://github.com/Athira-M-Chandran/Flight-Fare-Prediction/blob/main/Dataset/Sample_submission.xlsx?raw=true
+  train_dataset_download_url: https://github.com/Athira-M-Chandran/Datasets/blob/main/Flight%20Fare%20Predictions/Data_Train.xlsx?raw=true
+  test_dataset_download_url: https://github.com/Athira-M-Chandran/Datasets/blob/main/Flight%20Fare%20Predictions/Test_set.xlsx?raw=true
+  sample_dataset_download_url: https://github.com/Athira-M-Chandran/Datasets/blob/main/Flight%20Fare%20Predictions/Sample_submission.xlsx?raw=true
   ingested_dir: ingested_data
   ingested_train_dir: train
   ingested_test_dir: test 
